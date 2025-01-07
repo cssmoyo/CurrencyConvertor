@@ -13,7 +13,7 @@ public class SimpleCurrencyConverter implements CurrencyConverter {
         double sourceRate = exchangeRates.get(sourceCurrency);
         double targetRate = exchangeRates.get(targetCurrency);
 
-        // from source currency to target currency
+        // amount = source currency / target currency
         return amount * (targetRate / sourceRate);
 
     }

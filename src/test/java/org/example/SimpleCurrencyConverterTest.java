@@ -26,6 +26,7 @@ import static org.junit.Assert.assertThrows;
             assertEquals(85.0, result, 0.001);
         }
 
+        //test valid currencies
         @Test
         public void testConvert_InvalidSourceCurrency() {
             assertThrows(IllegalArgumentException.class, () -> {
@@ -33,6 +34,7 @@ import static org.junit.Assert.assertThrows;
             });
         }
 
+        //test invalid currencies
         @Test
         public void testConvert_InvalidTargetCurrency() {
             assertThrows(IllegalArgumentException.class, () -> {
@@ -40,12 +42,14 @@ import static org.junit.Assert.assertThrows;
             });
         }
 
+        //test same currencies
         @Test
         public void testConvert_SameCurrency() {
             double result = converter.convert("USD", "USD", 100, exchangeRates);
             assertEquals(100.0, result, 0.001);
         }
 
+        //test results with large amounts
         @Test
         public void testConvert_LargeAmount() {
             double result = converter.convert("USD", "JPY", 1000, exchangeRates);

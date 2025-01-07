@@ -7,6 +7,7 @@ import java.util.Map;
 public class CurrencyData {
      public static final Map<String, Map<String, Double>> exchangeRatesByRegion = new HashMap<>();
     //add exchange rates by region/continent
+    //hard coded exchange rates , add api to get latest for efficiency
     static {
 
         //Africa

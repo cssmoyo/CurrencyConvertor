@@ -79,7 +79,6 @@ public class CurrencyConverterGUI extends JFrame {
 
         // Set default region and update currency boxes to avoid NullPointerExecption
         String defaultRegion = "North America";
-        // Set your default region here
         regionBox.setSelectedItem(defaultRegion);
         System.out.println("Default region set to: " + defaultRegion);//debug
         updateCurrencyBoxes(defaultRegion);
